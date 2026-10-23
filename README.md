@@ -1,19 +1,20 @@
-# EC-CODE (Pilot Version)
+# EC-CODE (Pilot Version 2.5.1)
 
-**EC-CODE** is an open-source Python-based tool (Numpy/SciPy) designed to model and calibrate chlorine production in membrane-free NaCl electrolysis.
+**EC-CODE** is an open-source Python tool (Numpy/SciPy) designed to model and calibrate chlorine production in membrane-free NaCl electrolysis.
 
-### Current Capabilities (Pilot Version V2.5.1)
-*   **Physical Events:** Integrates **6** physical events.
-*   **Validation:** Validated through **69** automated tests.
-*   **Inference:** Utilizes a **Grid-based inference** approach.
-*   **Sensitivity:** Uses One-At-A-Time (OAT) sensitivity analysis.
-*   **Environment:** Runs in Google Colab using Numpy and SciPy.
+### Current Capabilities
+*   **Physical Model:** Integrates a single thermal ODE equation (C_tot.dT/dt) with 6 physical events.
+*   **Validation:** Validated through 69 automated software tests (68 passed, 1 warning).
+*   **Inference:** Utilizes a Grid-based inference approach to estimate x1.
+*   **Dependencies:** Requires initial DPD measurements for calibration.
+*   **Environment:** Runs in Google Colab.
 
-### Important Limitations
-*   The model requires initial DPD measurements to calibrate the current efficiency (x1).
-*   The estimated x1 represents a lower bound due to prior assumptions.
-*   Thermal parameter (K25) is absorbed into dry heat loss due to unmeasured variables.
+### Limitations
+*   The estimated x1 is a lower bound, conditional on prior assumptions.
+*   Thermal parameter (K25) is absorbed into dry heat loss (LIM-6).
+*   T_CL = 0.51 is a legacy value (KCl vs NaCl ~0.60) (LIM-9).
+*   C_CL in the repository (5.6) is outdated compared to actual (6.74) (LIM-5).
 
 ### Repository Contents
-*   `EC-CODE_v2.5.1_PILOT_NaCl.ipynb`: The main Jupyter Notebook containing the code, model, and tests.
+*   `EC-CODE_v2.5.1_PILOT_NaCl.ipynb`: The Jupyter Notebook containing the code and tests.
 *   `LICENSE`: MIT License.
