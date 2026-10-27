@@ -41,3 +41,4 @@ MIT licence. Please cite the Zenodo record: https://doi.org/10.5281/zenodo.23558
 - **C_CL Comment Typo:** The inline comment for `C_CL = 6.74` incorrectly states "(= 5.6 mmol/L)". The correct value is 6.74 mmol/L.
 - **Module Numbering:** Output labels (e.g., `2_mass_transfer`, `3_thermal`) do not perfectly align with the 1-6 numbering in the manuscript table.
 - **K25 Sensitivity:** The K25 check shows high sensitivity to K_dry perturbations (rel_err = 73.8% at +15% K_dry), as noted in LIM-6.
+*Note: This section was added to the GitHub main branch after release v2.5.1. The archived v2.5.1 on Zenodo contains the exact same code, but lacks this README update.*
