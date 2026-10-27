@@ -36,3 +36,8 @@ Dependencies: Python >= 3.10, numpy, scipy, pandas, matplotlib (standard Colab r
 
 ## Citation / licence
 MIT licence. Please cite the Zenodo record: https://doi.org/10.5281/zenodo.23558695
+## Known Issues in v2.5.1 (Addressed in Next Release)
+- **Test Failures Display:** Running "Run all" initially shows 2 test failures. A subsequent `PATCH 2` cell redefines and resolves these (Pass: 68, Fail: 0). The next release will integrate these fixes directly into the main definitions.
+- **C_CL Comment Typo:** The inline comment for `C_CL = 6.74` incorrectly states "(= 5.6 mmol/L)". The correct value is 6.74 mmol/L.
+- **Module Numbering:** Output labels (e.g., `2_mass_transfer`, `3_thermal`) do not perfectly align with the 1-6 numbering in the manuscript table.
+- **K25 Sensitivity:** The K25 check shows high sensitivity to K_dry perturbations (rel_err = 73.8% at +15% K_dry), as noted in LIM-6.
